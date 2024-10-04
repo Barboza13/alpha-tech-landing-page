@@ -1,0 +1,13 @@
+---
+interface Props {
+    img: ImageMetadata
+    description: string
+}
+
+const { img, description } = Astro.props
+---
+
+<div class="flex gap-4 w-[400px] h-[300px] bg-white rounded-md p-3">
+    <img class="w-[128px] h-[128px]" src={img.src} />
+    <p class="font-bold">{description}</p>
+</div>

@@ -1,5 +1,13 @@
 ---
 import MainLayout from '@layouts/MainLayout.astro'
+import ServicesCard from '@components/ServicesCard.astro'
+
+import cameraImage from '@images/services-camera.png'
+import webDevelopmentImage from '@images/services-web-development.png'
+import mobileDevelopmentImage from '@images/services-mobile-development.png'
+import networkImage from '@images/services-network.png'
+import technicalServicesImage from '@images/services-technical-services.png'
+import servicesComputerSuppliesImage from '@images/services-computer-supplies.png'
 ---
 
 <!doctype html>
@@ -11,7 +19,48 @@ import MainLayout from '@layouts/MainLayout.astro'
     </head>
     <body>
         <MainLayout>
-            <h1>Services</h1>
+            <section class="flex flex-col">
+                <h1 class="text-3xl text-white text-center mt-8">
+                    ¿Cuáles son los servicios que ofrecemos?
+                </h1>
+                <div
+                    class="flex flex-wrap justify-center items-center gap-10 p-20"
+                >
+                    <ServicesCard
+                        img={cameraImage}
+                        description="Servicio de instalacion de circuito cerrado."
+                    />
+                    <ServicesCard
+                        img={webDevelopmentImage}
+                        description="Desarrollo de paginas web y aplicaciones web."
+                    />
+                    <ServicesCard
+                        img={mobileDevelopmentImage}
+                        description="Desarrollo de aplicaciones mobiles."
+                    />
+                    <ServicesCard
+                        img={networkImage}
+                        description="Instalacion de cableado extructurado en red."
+                    />
+                    <ServicesCard
+                        img={technicalServicesImage}
+                        description="Servicios tecnicos."
+                    />
+                    <ServicesCard
+                        img={servicesComputerSuppliesImage}
+                        description="Insumos informaticos."
+                    />
+                </div>
+                <div
+                    class="flex justify-around items-center bg-gray-500 h-[500px] text-white"
+                >
+                    <h1>Contacto</h1>
+                    <a
+                        class="border border-green-500 text-green-500 text-center text-xl hover:bg-green-500 hover:text-white rounded-full w-[200px] p-3"
+                        href="/contact">Contactar</a
+                    >
+                </div>
+            </section>
         </MainLayout>
     </body>
 </html>
