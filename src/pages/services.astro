@@ -20,37 +20,41 @@ import servicesComputerSuppliesImage from '@images/services-computer-supplies.pn
     <body>
         <MainLayout>
             <section class="flex flex-col">
-                <h1 class="text-3xl text-white text-center mt-8">
+                <h1 class="font-bold text-3xl text-white text-center mt-8">
                     ¿Cuáles son los servicios que ofrecemos?
                 </h1>
-                <div
-                    class="flex flex-wrap justify-center items-center gap-10 p-20"
-                >
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-10 p-10">
                     <ServicesCard
                         img={cameraImage}
-                        description="Servicio de instalacion de circuito cerrado."
+                        titulo="Servicio de instalación de circuito cerrado."
+                        description="Soluciones de seguridad personalizadas con instalación profesional de sistemas de circuito cerrado."
                     />
                     <ServicesCard
                         img={webDevelopmentImage}
-                        description="Desarrollo de paginas web y aplicaciones web."
+                        titulo="Desarrollo de páginas web y aplicaciones web."
+                        description="Creamos sitios web atractivos y aplicaciones funcionales adaptadas a tus necesidades."
                     />
                     <ServicesCard
                         img={mobileDevelopmentImage}
-                        description="Desarrollo de aplicaciones mobiles."
+                        titulo="Desarrollo de aplicaciones móviles."
+                        description="Desarrollo de aplicaciones móviles intuitivas y optimizadas para todas las plataformas."
                     />
                     <ServicesCard
                         img={networkImage}
-                        description="Instalacion de cableado extructurado en red."
+                        titulo="Instalación de cableado estructurado en red."
+                        description="Implementamos cableado estructurado para una conectividad y rendimiento de red óptimos."
                     />
                     <ServicesCard
                         img={technicalServicesImage}
-                        description="Servicios tecnicos."
+                        titulo="Servicios técnicos."
+                        description="Soporte técnico integral para mantener tus sistemas y dispositivos en óptimas condiciones."
                     />
                     <ServicesCard
                         img={servicesComputerSuppliesImage}
-                        description="Insumos informaticos."
+                        titulo="Insumos informáticos."
+                        description="Proporcionamos insumos de calidad para optimizar el rendimiento de tus equipos."
                     />
-                </div>
+                </div>                
                 <div
                     class="flex justify-around items-center bg-gray-500 h-[500px] text-white"
                 >
