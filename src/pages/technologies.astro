@@ -1,5 +1,37 @@
 ---
 import MainLayout from '@layouts/MainLayout.astro'
+import TechnologyCard from '@components/TechnologyCard.astro'
+
+import htmlLogo from '@icons/icon-html.png'
+import cssLogo from '@icons/icon-css.png'
+import javascriptLogo from '@icons/icon-javascript.png'
+import typescriptLogo from '@icons/icon-typescript.png'
+import vueLogo from '@icons/icon-vue.png'
+import tailwindLogo from '@icons/icon-tailwind.png'
+import bootstrapLogo from '@icons/icon-bootstrap.png'
+import astroLogo from '@icons/icon-astro.png'
+import laravelLogo from '@icons/icon-laravel.png'
+import phpLogo from '@icons/icon-php.png'
+import mysqlLogo from '@icons/icon-mysql.png'
+
+interface language {
+    img: ImageMetadata
+    name: string
+}
+
+const icons: Array<language> = [
+    { img: htmlLogo, name: 'HTML' },
+    { img: cssLogo, name: 'CSS' },
+    { img: javascriptLogo, name: 'Javascript' },
+    { img: typescriptLogo, name: 'Typescript' },
+    { img: vueLogo, name: 'Vue.js' },
+    { img: tailwindLogo, name: 'Tailwind' },
+    { img: bootstrapLogo, name: 'Bootstrap' },
+    { img: astroLogo, name: 'Astro.js' },
+    { img: laravelLogo, name: 'Laravel' },
+    { img: phpLogo, name: 'PHP' },
+    { img: mysqlLogo, name: 'MySQL' },
+]
 ---
 
 <!doctype html>
@@ -11,7 +43,22 @@ import MainLayout from '@layouts/MainLayout.astro'
     </head>
     <body>
         <MainLayout>
-            <h1>Tecnologias</h1>
+            <section
+                class="flex flex-col justify-start items-center h-[1000px] bg-blue-700 gap-10"
+            >
+                <h1 class="text-3xl text-white mt-10">
+                    Tecnologias utilizadas
+                </h1>
+                <div
+                    class="grid xl:grid-cols-5 sm:grid-cols-1 h-full place-content-start place-items-center w-full text-white gap-32 mt-10"
+                >
+                    {
+                        icons.map(({ img, name }) => (
+                            <TechnologyCard img={img} name={name} />
+                        ))
+                    }
+                </div>
+            </section>
         </MainLayout>
     </body>
 </html>

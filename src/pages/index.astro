@@ -1,5 +1,7 @@
 ---
 import MainLayout from '@layouts/MainLayout.astro'
+
+import alphaTechLogo from '@images/alphatech.webp'
 ---
 
 <!doctype html>
@@ -12,14 +14,62 @@ import MainLayout from '@layouts/MainLayout.astro'
     <body>
         <MainLayout>
             <section
-                class="flex justify-center items-center bg-gray-600 h-[860px]"
+                class="flex flex-col justify-start items-center bg-image-background bg-cover bg-center w-full h-[840px] text-white font-bold"
             >
-                <h1>Inicio</h1>
+                <img
+                    class="mt-28"
+                    src={alphaTechLogo.src}
+                    alt="Alpha Tech Logo"
+                />
+                <h1 class="text-3xl text-center mt-20 w-[50%]">
+                    Ofrecemos servicios y soluciones informaticas de calidad,
+                    comprometidos con la seguridad y desarrollo tecnologico de
+                    tu empresa o negocio propio.
+                </h1>
             </section>
-            <section>
-                <h1>Mision y Vision</h1>
+            <section
+                class="flex flex-col justify-center items-center h-[700px] bg-gray-800 text-white gap-20 p-10"
+            >
+                <div class="text-center text-3xl">
+                    <h1 class="underline">Misión</h1>
+                    <p>
+                        Proveer servicios tecnológicos de alta calidad que
+                        cubran las necesidades de nuestros clientes en
+                        instalaciones de cámaras de seguridad, desarrollo web y
+                        móvil, suministro de insumos informáticos y cableado
+                        estructurado de red. Nos comprometemos a entregar
+                        soluciones personalizadas que impulsen el crecimiento y
+                        la innovación, garantizando un servicio confiable,
+                        profesional y adaptado a las demandas del mercado.
+                    </p>
+                </div>
+                <div class="text-center text-3xl">
+                    <h1 class="underline">Visión</h1>
+                    <p>
+                        Ser la empresa líder en soluciones tecnológicas
+                        integrales, reconocida por nuestra innovación y
+                        excelencia en la implementación de sistemas de
+                        seguridad, desarrollo de plataformas web y móviles,
+                        suministro de insumos informáticos, y servicios de
+                        cableado estructurado. Nos esforzamos por transformar la
+                        manera en que las empresas y hogares interactúan con la
+                        tecnología, facilitando el acceso a herramientas que
+                        promuevan la seguridad, la eficiencia y la conectividad.
+                    </p>
+                </div>
             </section>
-            <section></section>
+            <section
+                class="flex justify-center items-center bg-blue-800 h-[600px] gap-10"
+            >
+                <p class="text-3xl">
+                    Si usted esta interesado en solicitar nuestros servicios
+                    puede hechar un vistazo a nuestros productos y servicios.
+                </p>
+                <a
+                    class="border border-green-500 text-green-500 text-center text-xl hover:bg-green-500 hover:text-white rounded-full w-[200px] p-3"
+                    href="/services">Ver servicios</a
+                >
+            </section>
         </MainLayout>
     </body>
 </html>

@@ -1,0 +1,13 @@
+---
+interface Props {
+    img: ImageMetadata
+    name: string
+}
+
+const { img, name } = Astro.props
+---
+
+<div class="text-center">
+    <img class="w-[100px] h-[100px]" src={img.src} />
+    <h3 class="mt-4">{name}</h3>
+</div>
