@@ -1,6 +1,5 @@
 ---
-import MainLayout from '@layouts/MainLayout.astro'
-import TechnologyCard from '@components/TechnologyCard.astro'
+import TechnologyItem from "./TechnologyItem.astro"
 
 import htmlLogo from '@icons/icon-html.png'
 import cssLogo from '@icons/icon-css.png'
@@ -34,31 +33,13 @@ const icons: Array<language> = [
 ]
 ---
 
-<!doctype html>
-<html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Tecnologias</title>
-    </head>
-    <body>
-        <MainLayout>
-            <section
-                class="flex flex-col justify-start items-center h-[1000px] bg-blue-700 gap-10"
-            >
-                <h1 class="text-3xl text-white mt-10">
-                    Tecnologias utilizadas
-                </h1>
-                <div
-                    class="grid xl:grid-cols-5 sm:grid-cols-1 h-full place-content-start place-items-center w-full text-white gap-32 mt-10"
-                >
-                    {
-                        icons.map(({ img, name }) => (
-                            <TechnologyCard img={img} name={name} />
-                        ))
-                    }
-                </div>
-            </section>
-        </MainLayout>
-    </body>
-</html>
+<h1 class="text-center lg:mb-4 text-3xl font-extrabold text-gray-900 dark:text-blue-950 md:text-5xl lg:text-6xl">
+    <span class="text-transparent bg-clip-text bg-gradient-to-r to-blue-600 from-sky-400">TECNOLOGIAS</span>
+</h1>
+<div class="grid grid-cols-1 md:grid-cols-4 gap-2">
+{
+    icons.map(({ img, name }) => (
+        <TechnologyItem img={img} name={name} />
+    ))
+}
+</div>
