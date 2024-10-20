@@ -1,69 +1,32 @@
 ---
 import MainLayout from '@layouts/MainLayout.astro'
 import SectionContainer from '@components/SectionContainer.astro'
+import SectionNosotros from '@components/SectionNosotros.astro'
 import Nosotros from '@components/Nosotros.astro'
 import Inicio from '@components/Inicio.astro'
-import ServicesCard from '@components/ServicesCard.astro'
+import Services from '@components/Services.astro'
 import SectionServices from '@components/SectionService.astro'
+import Technology from '@components/Technology.astro'
+import SectionTechnology from '@components/SectionTechnology.astro'
 
-import cameraImage from '@images/services-camera.png'
-import webDevelopmentImage from '@images/services-web-development.png'
-import mobileDevelopmentImage from '@images/services-mobile-development.png'
-import networkImage from '@images/services-network.png'
-import technicalServicesImage from '@images/services-technical-services.png'
-import servicesComputerSuppliesImage from '@images/services-computer-supplies.png'
 ---
 
-<MainLayout
-    title="" 
-    descripcion=""   
->
-<main class="flex-grow">
-    <SectionContainer class="py-40 pb-24" id="inicio">
-        <Inicio/>
-    </SectionContainer>
-    
-    <SectionContainer class="mt-5 mb-20" id="nosotros">
-        <Nosotros/>
-    </SectionContainer>
+<MainLayout title="" descripcion="">
+    <main class="flex-grow">
+        <SectionContainer class="py-40 pb-24" id="inicio">
+            <Inicio />
+        </SectionContainer>
 
-    <SectionServices id="servicios">
-        <h1 class="text-center lg:mb-4 text-3xl font-extrabold text-gray-900 dark:text-blue-950 md:text-5xl lg:text-6xl">
-            <span class="text-transparent bg-clip-text bg-gradient-to-r to-blue-600 from-sky-400">SERVICIOS</span>
-        </h1>
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-10 p-10">
-            <ServicesCard
-                img={cameraImage}
-                titulo="Servicio de instalación de circuito cerrado."
-                description="Soluciones de seguridad personalizadas con instalación profesional de sistemas de circuito cerrado."
-            />
-            <ServicesCard
-                img={webDevelopmentImage}
-                titulo="Desarrollo de páginas web y aplicaciones web."
-                description="Creamos sitios web atractivos y aplicaciones funcionales adaptadas a tus necesidades."
-            />
-            <ServicesCard
-                img={mobileDevelopmentImage}
-                titulo="Desarrollo de aplicaciones móviles."
-                description="Desarrollo de aplicaciones móviles intuitivas y optimizadas para todas las plataformas."
-            />
-            <ServicesCard
-                img={networkImage}
-                titulo="Instalación de cableado estructurado en red."
-                description="Implementamos cableado estructurado para una conectividad y rendimiento de red óptimos."
-            />
-            <ServicesCard
-                img={technicalServicesImage}
-                titulo="Servicios técnicos."
-                description="Soporte técnico integral para mantener tus sistemas y dispositivos en óptimas condiciones."
-            />
-            <ServicesCard
-                img={servicesComputerSuppliesImage}
-                titulo="Insumos informáticos."
-                description="Proporcionamos insumos de calidad para optimizar el rendimiento de tus equipos."
-            />
-        </div> 
-    </SectionServices>
-</main>
+        <SectionNosotros class="mt-5 mb-20" id="nosotros">
+            <Nosotros />
+        </SectionNosotros>
+
+        <SectionServices class="mt-5 mb-20" id="servicios">
+            <Services/>
+        </SectionServices>
+
+        <SectionTechnology class="mt-5 mb-20">
+                <Technology/>
+        </SectionTechnology>
+    </main>
 </MainLayout>
-  
