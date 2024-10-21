@@ -1,0 +1,31 @@
+---
+import MainLayout from '@layouts/MainLayout.astro'
+import SectionContainer from '@components/SectionContainer.astro'
+import SectionNosotros from '@components/SectionNosotros.astro'
+import Nosotros from '@components/Nosotros.astro'
+import Inicio from '@components/Inicio.astro'
+import Services from '@components/Services.astro'
+import SectionServices from '@components/SectionService.astro'
+import Technology from '@components/Technology.astro'
+import SectionTechnology from '@components/SectionTechnology.astro'
+---
+
+<MainLayout title="AlphaTech" descripcion="">
+    <main class="flex-grow">
+        <SectionContainer class="py-40 pb-24" id="inicio">
+            <Inicio />
+        </SectionContainer>
+
+        <SectionNosotros class="mt-5 mb-20" id="nosotros">
+            <Nosotros />
+        </SectionNosotros>
+
+        <SectionServices class="mt-5 mb-20" id="servicios">
+            <Services />
+        </SectionServices>
+
+        <SectionTechnology class="mt-5 mb-20">
+            <Technology />
+        </SectionTechnology>
+    </main>
+</MainLayout>
