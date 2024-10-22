@@ -8,9 +8,13 @@ import Services from '@components/Services.astro'
 import SectionServices from '@components/SectionService.astro'
 import Technology from '@components/Technology.astro'
 import SectionTechnology from '@components/SectionTechnology.astro'
+import SectionMisionVision from '@components/SectionMisionVision.astro'
+import MisionVision from '@components/MIsionVision.astro'
+import SectionContacto from '@components/SectionContacto.astro'
+import Contacto from '@components/Contacto.astro'
 ---
 
-<MainLayout title="" descripcion="">
+<MainLayout title="AlphaTech" descripcion="">
     <main class="flex-grow">
         <SectionContainer class="py-40 pb-24" id="inicio">
             <Inicio />
@@ -20,12 +24,20 @@ import SectionTechnology from '@components/SectionTechnology.astro'
             <Nosotros />
         </SectionNosotros>
 
+        <SectionMisionVision class="mt-5 mb-20" id="misionvision">
+            <MisionVision />
+        </SectionMisionVision>
+
         <SectionServices class="mt-5 mb-20" id="servicios">
             <Services />
         </SectionServices>
 
-        <SectionTechnology class="mt-5 mb-20">
+        <SectionTechnology class="mt-5 mb-20" id="tecnologias">
             <Technology />
         </SectionTechnology>
+
+        <SectionContacto class="mt-5 mb-20" id="contacto">
+            <Contacto />
+        </SectionContacto>
     </main>
 </MainLayout>
