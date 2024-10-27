@@ -3,8 +3,8 @@ const { class: className, id } = Astro.props
 ---
 
 <section
-    id={id}
-    class={`w-full max-w-[800px] mx-auto min-h-[250px] md:h-[700px] flex justify-center items-center ${className}`}
+id={id}
+class={`mx-auto h-screen flex flex-col justify-center items-center ${className}`}
 >
     <slot />
 </section>
