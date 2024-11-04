@@ -12,6 +12,7 @@ import SectionMisionVision from '@components/SectionMisionVision.astro'
 import MisionVision from '@components/MIsionVision.astro'
 import SectionContacto from '@components/SectionContacto.astro'
 import Contacto from '@components/Contacto.astro'
+import SectionService from '@components/SectionService.astro'
 ---
 
 <MainLayout title="AlphaTech" descripcion="">
@@ -20,23 +21,18 @@ import Contacto from '@components/Contacto.astro'
             <Inicio />
         </SectionContainer>
 
-        <SectionNosotros class="" id="nosotros">
+        <SectionNosotros  id="nosotros">
             <Nosotros/>
         </SectionNosotros>
-
-        <SectionMisionVision class="" id="misionvision">
-            <MisionVision />
-        </SectionMisionVision>
-
-        <SectionServices class="" id="servicios">
+        <SectionServices  id="servicios">
             <Services />
         </SectionServices>
 
-        <SectionTechnology class="mt-5 mb-20" id="tecnologias">
+        <SectionTechnology id="proyectos">
             <Technology />
         </SectionTechnology>
 
-        <SectionContacto class="mt-5 mb-20" id="contacto">
+        <SectionContacto  id="contacto">
             <Contacto />
         </SectionContacto>
     </main>
