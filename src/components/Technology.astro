@@ -11,6 +11,8 @@ import bootstrapLogo from '@icons/icon-bootstrap.png'
 import astroLogo from '@icons/icon-astro.png'
 import laravelLogo from '@icons/icon-laravel.png'
 import phpLogo from '@icons/icon-php.png'
+import flutterLogo from '@icons/icon-flutter.png'
+import javaLogo from '@icons/icon-java.png'
 import mysqlLogo from '@icons/icon-mysql.png'
 
 interface language {
@@ -23,12 +25,14 @@ const icons: Array<language> = [
     { img: cssLogo, name: 'CSS' },
     { img: javascriptLogo, name: 'Javascript' },
     { img: typescriptLogo, name: 'Typescript' },
-    { img: vueLogo, name: 'Vue.js' },
-    { img: tailwindLogo, name: 'Tailwind' },
+    { img: tailwindLogo, name: 'Tailwindcss' },
     { img: bootstrapLogo, name: 'Bootstrap' },
+    { img: vueLogo, name: 'Vue.js' },
     { img: astroLogo, name: 'Astro.js' },
     { img: laravelLogo, name: 'Laravel' },
     { img: phpLogo, name: 'PHP' },
+    { img: flutterLogo, name: 'Flutter' },
+    { img: javaLogo, name: 'Java' },
     { img: mysqlLogo, name: 'MySQL' },
 ]
 ---
@@ -46,3 +50,9 @@ const icons: Array<language> = [
 <div class="grid grid-cols-1 md:grid-cols-4 place-items-center gap-4">
     {icons.map(({ img, name }) => <TechnologyItem img={img} name={name} />)}
 </div>
+
+<script>
+    import { observeCards } from '@animations/animations'
+
+    observeCards()
+</script>

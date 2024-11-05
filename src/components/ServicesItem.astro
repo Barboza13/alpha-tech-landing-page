@@ -8,11 +8,22 @@ interface Props {
 const { img, titulo, description } = Astro.props
 ---
 
-<div class="mx-auto max-w-xs p-3 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 text-center h-auto md:h-auto
-    ' ">
+<div
+    class="mx-auto max-w-xs p-3 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 text-center h-auto md:h-auto opacity-0 translate-y-8 transition-all duration-1000 ease-in-out card"
+>
     <div class="grid place-items-center">
-        <img class="object-cover size-20 rounded-t-lg md:h-20 md:w-20 md:rounded-none md:rounded-s-lg" src={img} alt={titulo} />
+        <img
+            class="object-cover size-20 rounded-t-lg md:h-20 md:w-20 md:rounded-none md:rounded-s-lg"
+            src={img}
+            alt={titulo}
+        />
     </div>
-    <h5 class="mb-2 text-xl font-semibold tracking-tight text-gray-900 dark:text-white">{titulo}</h5>
-    <p class="mb-3 font-normal text-gray-500 dark:text-gray-400">{description}</p>
+    <h5
+        class="mb-2 text-xl font-semibold tracking-tight text-gray-900 dark:text-white"
+    >
+        {titulo}
+    </h5>
+    <p class="mb-3 font-normal text-gray-500 dark:text-gray-400">
+        {description}
+    </p>
 </div>
