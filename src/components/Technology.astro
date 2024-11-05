@@ -1,6 +1,19 @@
 ---
 import TechnologyItem from './TechnologyItem.astro'
 
+import htmlLogo from '@icons/icon-html.png'
+import cssLogo from '@icons/icon-css.png'
+import javascriptLogo from '@icons/icon-javascript.png'
+import typescriptLogo from '@icons/icon-typescript.png'
+import vueLogo from '@icons/icon-vue.png'
+import tailwindLogo from '@icons/icon-tailwind.png'
+import bootstrapLogo from '@icons/icon-bootstrap.png'
+import astroLogo from '@icons/icon-astro.png'
+import laravelLogo from '@icons/icon-laravel.png'
+import phpLogo from '@icons/icon-php.png'
+import flutterLogo from '@icons/icon-flutter.png'
+import javaLogo from '@icons/icon-java.png'
+import mysqlLogo from '@icons/icon-mysql.png'
 import proyecto1 from '@images/proyecto1.webp'
 import proyecto2 from '@images/proyecto2.webp'
 
@@ -11,6 +24,20 @@ interface Language {
     technologies: string[]
 }
 
+const icons: Array<language> = [
+    { img: htmlLogo, name: 'HTML' },
+    { img: cssLogo, name: 'CSS' },
+    { img: javascriptLogo, name: 'Javascript' },
+    { img: typescriptLogo, name: 'Typescript' },
+    { img: tailwindLogo, name: 'Tailwindcss' },
+    { img: bootstrapLogo, name: 'Bootstrap' },
+    { img: vueLogo, name: 'Vue.js' },
+    { img: astroLogo, name: 'Astro.js' },
+    { img: laravelLogo, name: 'Laravel' },
+    { img: phpLogo, name: 'PHP' },
+    { img: flutterLogo, name: 'Flutter' },
+    { img: javaLogo, name: 'Java' },
+    { img: mysqlLogo, name: 'MySQL' },
 const icons: Array<Language> = [
     {
         img: proyecto1,
@@ -24,6 +51,23 @@ const icons: Array<Language> = [
         description: "Sitio web oficial de la Universidad San Ignacio, proporcionando información institucional, acceso a recursos académicos y noticias relevantes para estudiantes y docentes.",
         technologies: ["Laravel 11", "MYSQL", "HTML", "CSS", "JS"]
     }
+]
+
+const icons: Array<Language> = [
+    {
+        img: proyecto1,
+        name: 'MasFutbolpy',
+        description:
+            'Plataforma informativa dedicada al fútbol paraguayo, ofreciendo noticias, resultados y estadísticas en tiempo real para los aficionados y jugadores locales.',
+        technologies: ['Laravel 11', 'MYSQL', 'TailwindCSS'],
+    },
+    {
+        img: proyecto2,
+        name: 'upsanignacio.edu.py',
+        description:
+            'Sitio web oficial de la Universidad San Ignacio, proporcionando información institucional, acceso a recursos académicos y noticias relevantes para estudiantes y docentes.',
+        technologies: ['Laravel 11', 'MYSQL', 'HTML', 'CSS', 'JS'],
+    },
 ]
 ---
 
@@ -45,3 +89,9 @@ const icons: Array<Language> = [
         ))
     }
 </div>
+
+<script>
+    import { observeCards } from '@animations/animations'
+
+    observeCards()
+</script>

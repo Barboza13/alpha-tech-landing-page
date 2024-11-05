@@ -15,7 +15,11 @@ const { title, descripcion } = Astro.props
         <meta charset="UTF-8" />
         <meta name="description" content={descripcion} />
         <meta name="viewport" content="width=device-width" />
-        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+        <link
+            rel="icon"
+            type="image/svg+xml"
+            href="src/assets/images/alphatech.webp"
+        />
         <meta name="generator" content={Astro.generator} />
         <title>{title}</title>
     </head>
@@ -25,7 +29,7 @@ const { title, descripcion } = Astro.props
             [background:radial-gradient(125%_125%_at_50%_10%,#fff_40%,#63e_100%)]
             h-screen sm:h-screen md:h-screen lg:h-screen"
         >
-        </div>    
+        </div>
         <Navbar />
         <slot />
         <Footer />
