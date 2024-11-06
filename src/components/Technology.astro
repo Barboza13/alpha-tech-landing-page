@@ -3,6 +3,8 @@ import TechnologyItem from './TechnologyItem.astro'
 
 import proyecto1 from '@images/proyecto1.webp'
 import proyecto2 from '@images/proyecto2.webp'
+import java from '@images/java.webp'
+import laravel from '@images/laravel.webp'
 
 interface Language {
     img: ImageMetadata
@@ -14,26 +16,38 @@ interface Language {
 const icons: Array<Language> = [
     {
         img: proyecto1,
-        name: "MasFutbolpy",
-        description: "Plataforma informativa dedicada al fútbol paraguayo, ofreciendo noticias, resultados y estadísticas en tiempo real para los aficionados y jugadores locales.",
-        technologies: ["Laravel 11", "MYSQL", "TailwindCSS"] 
+        name: "Astro",
+        description: "Para las landing pages que hemos desarrollado para algunas empresas, utilizamos Astro para diseñar interfaces visualmente atractivas y altamente optimizadas en cuanto a rendimiento.",
+        technologies: ["Landing Pages", "Sitios Webs", "Blogs"] 
     },
     {
         img: proyecto2,
-        name: "upsanignacio.edu.py",
-        description: "Sitio web oficial de la Universidad San Ignacio, proporcionando información institucional, acceso a recursos académicos y noticias relevantes para estudiantes y docentes.",
-        technologies: ["Laravel 11", "MYSQL", "HTML", "CSS", "JS"]
+        name: "Flutter",
+        description: "Con una sola base de código en Dart, utilizamos Flutter para crear apps para iOS y Android, aprovechando el mismo diseño, widgets y lógica.",
+        technologies: ["Aplicaciones Moviles", "Android", "iOS"]
+    },
+    {
+        img: java,
+        name: "Java",
+        description: "Con una sola base de código en Dart, utilizamos Flutter para crear apps para iOS y Android, aprovechando el mismo diseño, widgets y lógica.",
+        technologies: ["Aplicaciones Moviles", "Android", "iOS"]
+    },
+    {
+        img: laravel,
+        name: "Laravel",
+        description: "Con una sola base de código en Dart, utilizamos Flutter para crear apps para iOS y Android, aprovechando el mismo diseño, widgets y lógica.",
+        technologies: ["Aplicaciones Moviles", "Android", "iOS"]
     }
 ]
 ---
 
 <h1 class="mt-20 text-center mb-6 sm:mb-8 lg:mb-4 text-3xl sm:text-4xl md:text-5xl font-extrabold text-gray-900 dark:text-blue-950">
     <span class="text-transparent bg-clip-text bg-gradient-to-r from-sky-400 to-blue-600">
-        PROYECTOS
+        HABILIDADES
     </span>
 </h1>
 
-<div class="grid grid-cols-1 md:grid-cols-2 gap-2">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-2">
     {
         icons.map(({ img, name, description, technologies }, index) => (
             <TechnologyItem
