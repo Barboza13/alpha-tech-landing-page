@@ -21,10 +21,10 @@ import SectionService from '@components/SectionService.astro'
             <Inicio />
         </SectionContainer>
 
-        <SectionNosotros  id="nosotros">
-            <Nosotros/>
+        <SectionNosotros id="nosotros">
+            <Nosotros />
         </SectionNosotros>
-        <SectionServices  id="servicios">
+        <SectionServices id="servicios">
             <Services />
         </SectionServices>
 
@@ -32,8 +32,14 @@ import SectionService from '@components/SectionService.astro'
             <Technology />
         </SectionTechnology>
 
-        <SectionContacto  id="contacto">
+        <SectionContacto id="contacto">
             <Contacto />
         </SectionContacto>
     </main>
 </MainLayout>
+
+<script>
+    import { observeCards } from 'src/animations/animations'
+
+    observeCards()
+</script>
