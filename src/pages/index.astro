@@ -1,18 +1,16 @@
 ---
 import MainLayout from '@layouts/MainLayout.astro'
+
 import SectionContainer from '@components/SectionContainer.astro'
 import SectionNosotros from '@components/SectionNosotros.astro'
 import Nosotros from '@components/Nosotros.astro'
 import Inicio from '@components/Inicio.astro'
 import Services from '@components/Services.astro'
-import SectionServices from '@components/SectionService.astro'
-import Technology from '@components/Technology.astro'
-import SectionTechnology from '@components/SectionTechnology.astro'
-import SectionMisionVision from '@components/SectionMisionVision.astro'
-import MisionVision from '@components/MIsionVision.astro'
+import SectionServices from '@components/SectionServices.astro'
+import Skills from '@components/Skills.astro'
+import SectionSkills from '@components/SectionSkills.astro'
 import SectionContacto from '@components/SectionContacto.astro'
 import Contacto from '@components/Contacto.astro'
-import SectionService from '@components/SectionService.astro'
 ---
 
 <MainLayout title="AlphaTech" descripcion="">
@@ -24,13 +22,14 @@ import SectionService from '@components/SectionService.astro'
         <SectionNosotros id="nosotros">
             <Nosotros />
         </SectionNosotros>
+
         <SectionServices id="servicios">
             <Services />
         </SectionServices>
 
-        <SectionTechnology id="proyectos">
-            <Technology />
-        </SectionTechnology>
+        <SectionSkills id="habilidades">
+            <Skills />
+        </SectionSkills>
 
         <SectionContacto id="contacto">
             <Contacto />
